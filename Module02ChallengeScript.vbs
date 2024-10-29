@@ -52,13 +52,13 @@ Sub stockAnalysis():
             
             ' check to see if the value of the total stock volume is 0
             If total = 0 Then
-            ' Print the results in the summary table section (column I- L)
-            ws.Range("I" & 2 + summaryTableRow).Value = ws.Cells(row, 1).Value   ' prints the ticker value from columns A
-            ws.Range("J" & 2 + summaryTableRow).Value = 0                     ' prints a 0 in column J (Quarterly Change)
-            ws.Range("k" & 2 + summaryTableRow).Value = 0                     ' prints a 0 in column K (% Change)
-            ws.Range("L" & 2 + summaryTableRow).Value = 0                     ' prints a 0 in column L (total stock volume)
+                ' Print the results in the summary table section (column I- L)
+                ws.Range("I" & 2 + summaryTableRow).Value = ws.Cells(row, 1).Value   ' prints the ticker value from columns A
+                ws.Range("J" & 2 + summaryTableRow).Value = 0                     ' prints a 0 in column J (Quarterly Change)
+                ws.Range("k" & 2 + summaryTableRow).Value = 0                     ' prints a 0 in column K (% Change)
+                ws.Range("L" & 2 + summaryTableRow).Value = 0                     ' prints a 0 in column L (total stock volume)
             
-            Else
+             Else
                 'find the first non-zero first open value for the stock
                 If ws.Cells(StartValue, 3).Value = 0 Then
                     'if the first open is 0, search for first non-zero stock open value by moving to the next rows
@@ -116,8 +116,7 @@ Sub stockAnalysis():
             total = total + ws.Cells(row, 7).Value 'Gets the value from the 7th column (G)
            
             
-            
-          End If
+        End If
           
             
         Next row
@@ -172,8 +171,7 @@ Sub stockAnalysis():
     
         'Autofit the info across all columns
         ws.Columns("A:Q").AutoFit
-        
-        
+           
     Next ws
 End Sub
     
